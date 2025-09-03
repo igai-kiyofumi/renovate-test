@@ -3,6 +3,8 @@
   "extends": ["config:recommended"],
   "packageRules": [
     {
+      "matchManagers": ["terraform"],
+      "matchDepTypes": ["required_version"],
       "matchUpdateTypes": [
         "minor",
         "pin",
@@ -16,21 +18,34 @@
       "enabled": false
     },
     {
-      "matchManagers": ["terraform"],
-      "matchDepTypes": ["required_version"],
-      "matchUpdateTypes": ["major", "patch"],
-      "enabled": true
-    },
-    {
       "matchDatasources": ["terraform-provider"],
       "matchPackageNames": ["hashicorp/aws", "hashicorp/awscc"],
-      "matchUpdateTypes": ["major", "patch"],
-      "enabled": true
+      "matchUpdateTypes": [
+        "minor",
+        "pin",
+        "pinDigest",
+        "digest",
+        "lockFileMaintenance",
+        "rollback",
+        "bump",
+        "replacement"
+      ],
+      "enabled": false
     },
     {
       "matchManagers": ["terragrunt"],
-      "matchUpdateTypes": ["patch"],
-      "enabled": true
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "pin",
+        "pinDigest",
+        "digest",
+        "lockFileMaintenance",
+        "rollback",
+        "bump",
+        "replacement"
+      ],
+      "enabled": false
     }
   ]
 }
