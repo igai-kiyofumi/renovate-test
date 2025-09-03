@@ -1,0 +1,24 @@
+---
+# aqua - Declarative CLI Version Manager
+# https://aquaproj.github.io/
+registries:
+  - type: standard
+    ref: v4.363.0 # renovate: depName=aquaproj/aqua-registry
+
+packages:
+  - name: stedolan/jq@jq-1.6
+    tags: [ base ]
+  - name: koalaman/shellcheck@v0.10.0
+    tags: [ base ]
+  - name: docker/compose@v2.36.0
+    tags: [ base ]
+  - name: hashicorp/terraform@v1.13.0
+    tags: [ infra ]
+  - name: gruntwork-io/terragrunt@v0.83.0
+    tags: [ infra ]
+  - name: terraform-linters/tflint@v0.57.0
+    tags: [ ci, infra ]
+  - name: mvdan/sh@v3.00.0
+    tags: [ ci ]
+  - name: rhysd/actionlint@v1.7.7
+    tags: [ ci ]
