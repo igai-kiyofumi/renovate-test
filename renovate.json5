@@ -3,6 +3,19 @@
   "extends": ["config:recommended"],
   "packageRules": [
     {
+      "matchUpdateTypes": [
+        "minor",
+        "pin",
+        "pinDigest",
+        "digest",
+        "lockFileMaintenance",
+        "rollback",
+        "bump",
+        "replacement"
+      ],
+      "enabled": false
+    },
+    {
       "matchManagers": ["terraform"],
       "matchDepTypes": ["required_version"],
       "matchUpdateTypes": ["major", "patch"],
