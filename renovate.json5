@@ -17,7 +17,7 @@
     {
       "matchManagers": ["terragrunt"],
       "matchUpdateTypes": ["patch"],
-      "enabled": true"
+      "enabled": true
     }
   ]
 }
