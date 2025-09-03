@@ -3,10 +3,6 @@
   "extends": ["config:recommended"],
   "packageRules": [
     {
-      "matchUpdateTypes": ["major", "patch"],
-      "enabled": true
-    },
-    {
       "matchUpdateTypes": [
         "minor",
         "pin",
@@ -18,6 +14,21 @@
         "replacement"
       ],
       "enabled": false
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDepTypes": ["required_version"],
+      "matchUpdateTypes": ["major", "patch"],
+      "enabled": true
+    },
+    {
+      "matchDatasources": ["terraform-provider"],
+      "matchPackageNames": [
+        "hashicorp/aws",
+        "hashicorp/awscc"
+      ],
+      "matchUpdateTypes": ["major", "patch"],
+      "enabled": true
     }
   ]
 }
